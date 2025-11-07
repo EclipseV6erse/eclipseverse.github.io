@@ -26,10 +26,20 @@ body {
   animation: fadeIn 1s ease;
 }
 
+.site-footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
 .main-logo {
   font-size: 4rem;
   font-weight: 800;
   background: linear-gradient(90deg, #a259ff, #6a0dad);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -172,6 +182,13 @@ body {
   animation: floatGlow 5s ease-in-out infinite;
 }
 
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .hero-name {
   font-size: 2.4rem;
   font-weight: 700;
@@ -215,6 +232,35 @@ body {
   box-shadow: 0 0 15px rgba(180, 100, 255, 0.5);
 }
 
+/* --- Feedback Section --- */
+.feedback-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #16002a 0%, #0a0013 100%);
+  border-top: 1px solid rgba(150, 60, 255, 0.2);
+  margin-top: 80px;
+}
+
+.feedback-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #bb86fc;
+  margin-bottom: 10px;
+}
+
+.feedback-desc {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 /* --- Toast Notification --- */
 .toast {
   position: fixed;
@@ -230,6 +276,44 @@ body {
   z-index: 100;
   border: 1px solid #6a00ff;
 }
+
+/* --- Showcase Section --- */
+.portfolio-showcase {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.showcase-title {
+  font-size: 1.8rem;
+  color: #bb86fc;
+  margin-bottom: 30px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.showcase-grid img,
+.showcase-grid video {
+  width: 100%;
+  max-width: 360px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(180, 100, 255, 0.3);
+  box-shadow: 0 0 20px rgba(160, 80, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-grid img:hover,
+.showcase-grid video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(180, 100, 255, 0.6);
+}
+
 
 .toast.show {
   opacity: 1;
